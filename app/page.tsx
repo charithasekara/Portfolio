@@ -1,38 +1,38 @@
 // pages/index.js
-import Head from 'next/head';
-import { Inter } from 'next/font/google';
-import { FiInstagram, FiMail, FiGithub } from 'react-icons/fi';
-import { FaDribbble, FaGoogle, FaLinkedin, FaBehance } from 'react-icons/fa';
-import Image from 'next/image';
+import Head from "next/head";
+import { Inter } from "next/font/google";
+import { FiInstagram, FiMail, FiGithub } from "react-icons/fi";
+import { FaDribbble, FaGoogle, FaLinkedin, FaBehance } from "react-icons/fa";
+import Image from "next/image";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 const skills = [
-  { name: 'Communication', color: 'bg-green-400' },
-  { name: 'Collaboration', color: 'bg-blue-400' },
-  { name: 'Problem Solving', color: 'bg-purple-400' },
-  { name: 'Responsiveness', color: 'bg-pink-400' },
-  { name: 'UI Design', color: 'bg-indigo-400' },
-  { name: 'Creative', color: 'bg-yellow-400' },
-  { name: 'Code', color: 'bg-red-400' }
+  { name: "Communication", color: "bg-green-400" },
+  { name: "Collaboration", color: "bg-blue-400" },
+  { name: "Problem Solving", color: "bg-purple-400" },
+  { name: "Responsiveness", color: "bg-pink-400" },
+  { name: "UI Design", color: "bg-indigo-400" },
+  { name: "Creative", color: "bg-yellow-400" },
+  { name: "Code", color: "bg-red-400" },
 ];
 
 const workExperience = [
   {
-    title: 'INTERN UI/UX Engineer',
-    company: 'wavenet',
-    duration: '6 months',
-    technologies: ['Angular', 'React', 'CSS', 'JavaScript'],
-    bgColor: 'bg-violet-900/20'
+    title: "INTERN UI/UX Engineer",
+    company: "wavenet",
+    duration: "6 months",
+    technologies: ["Angular", "React", "CSS", "JavaScript"],
+    bgColor: "bg-violet-900/20",
   },
   {
-    title: 'Graphic Designer',
-    company: 'fiver',
-    type: 'freelancing',
-    duration: '3+',
-    icon: '⚡',
-    bgColor: 'bg-purple-900/20'
-  }
+    title: "Graphic Designer",
+    company: "fiver",
+    type: "freelancing",
+    duration: "3+",
+    icon: "⚡",
+    bgColor: "bg-purple-900/20",
+  },
 ];
 
 export default function Home() {
@@ -49,10 +49,18 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="my-4 bg-white/5 backdrop-blur-lg rounded-full">
             <ul className="flex justify-center space-x-8 py-3 text-sm">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact me</a></li>
+              <li>
+                <a href="#home">Home</a>
+              </li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#projects">Projects</a>
+              </li>
+              <li>
+                <a href="#contact">Contact me</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -79,8 +87,12 @@ export default function Home() {
 
           <h1 className="text-4xl font-bold mb-4">
             I'm Charitha Weerasekara
-            <div className="text-sm opacity-50 mt-1">I'm Charitha Weerasekara</div>
-            <div className="text-xs opacity-30 mt-1">I'm Charitha Weerasekara</div>
+            <div className="text-sm opacity-50 mt-1">
+              I'm Charitha Weerasekara
+            </div>
+            <div className="text-xs opacity-30 mt-1">
+              I'm Charitha Weerasekara
+            </div>
           </h1>
 
           <h2 className="text-2xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-12">
@@ -115,7 +127,9 @@ export default function Home() {
                       {work.title}
                     </h3>
                     <p className="text-gray-400 mt-1">{work.company}</p>
-                    <p className="text-sm text-gray-500 mt-2">{work.duration}</p>
+                    <p className="text-sm text-gray-500 mt-2">
+                      {work.duration}
+                    </p>
                     {work.technologies && (
                       <div className="flex gap-2 mt-4">
                         {work.technologies.map((tech, i) => (
@@ -129,9 +143,7 @@ export default function Home() {
                       </div>
                     )}
                   </div>
-                  {work.icon && (
-                    <div className="text-2xl">{work.icon}</div>
-                  )}
+                  {work.icon && <div className="text-2xl">{work.icon}</div>}
                 </div>
               </div>
             ))}
@@ -144,8 +156,8 @@ export default function Home() {
           <h2 className="text-2xl font-bold mb-4">Example Project</h2>
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6">
             <p className="text-gray-400 mb-4">
-              A web app for visualizing personalized spotify data. View your
-              top artists, top tracks, recently played tracks and detailed audio
+              A web app for visualizing personalized spotify data. View your top
+              artists, top tracks, recently played tracks and detailed audio
               information about each track. Create and save new playlists of
               recommended tracks based on your existing playlists.
             </p>
